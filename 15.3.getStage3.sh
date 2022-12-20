@@ -1,5 +1,5 @@
 #!/bin/bash
-.defaults.sh
+. defaults.sh
 
 DIR="/mnt/gentoo/"
 

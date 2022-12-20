@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #TODO change the default route to get info over ip route, and review config proxy read because never ask
-.defaults.sh
+. defaults.sh
 
 NET_FILE=/etc/conf.d/net
 HOSTNAME_FILE=/etc/conf.d/hostname

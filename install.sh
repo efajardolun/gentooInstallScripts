@@ -6,7 +6,7 @@
 ./15.1.setdate.sh
 ./15.3.getStage3.sh
 ./16.makeConf.sh
-cp /gentooInstallScripts /mnt/gentoo/root
+cp -r /root/gentooInstallScripts /mnt/gentoo/root
 ./17.chroot.sh
 cd /root/gentooInstallScripts
 ./18.ConfigPortage.sh
