@@ -21,3 +21,6 @@ else
 fi
 echo "printing the content of /etc/fstab"
 cat /etc/fstab
+
+
+#TODO add swap info

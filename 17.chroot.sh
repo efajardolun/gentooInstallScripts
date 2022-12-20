@@ -44,3 +44,5 @@ chroot /mnt/gentoo /bin/bash
 source /etc/profile
 export PS1="(chroot) ${PS1}"
 config_proxies
+
+#TODO make a revert chroot procedure

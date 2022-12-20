@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#TODO change the default route to get info over ip route, and review config proxy read because never ask
+
 DEFAULT_IP=192.168.100.29/24
 DEFAULT_HOSTNAME=gentoo_installing
 DEFAULT_ROUTE=192.168.100.1
