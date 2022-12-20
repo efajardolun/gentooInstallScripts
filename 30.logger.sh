@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Installing and configuring sysklogd"
-emerge --ask app-admin/sysklogd
+emerge app-admin/sysklogd
 rc-update add sysklogd default

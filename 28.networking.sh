@@ -8,21 +8,29 @@ then
     then
 	echo "select the network"
 	print_network_list
-	read -p "write selection:" selection
+	read -t 15 -p "write selection:" selection
+	if [ -z selection ]; then
+	    selection=0
+	fi
     else
 	selection=0
     fi
     echo "selected the ${networks[$selection]} device" 
     network=${networks[$selection]}
     echo "set the hostname"
-    read -p "set hostname to:" HOSTNAME
-
+    read -t 15 -p "set hostname to:" HOSTNAME
+    	if [ -z HOSTNAME ]; then
+	    HOSTNAME=$DEFAULT_HOSTNAME
+	fi
     echo "installing dhcp client"
-    emerge -n --ask net-misc/dhcpcd
+    emerge -n  net-misc/dhcpcd
     echo "installing network configuration tool"
-    emerge -n --ask --noreplace net-misc/netifrc
+    emerge -n --noreplace net-misc/netifrc
     echo "setting the static ip"
-    read -p "set the static ip using CIDR notation to:" STATIC_IP
+    read -t 15 -p "set the static ip using CIDR notation to:" STATIC_IP
+    	if [ -z STATIC_IP ]; then
+	    STATIC_IP=$DEFAULT_IP
+	fi
 else
     echo "verify network connection, it seems disconnected"
 fi

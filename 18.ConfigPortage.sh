@@ -12,11 +12,11 @@ eselect profile list
 #eselect profile set 2
 if ! [ -x "$(command -v cpuid2cpuflags)" ]
 then
-    emerge --ask app-portage/cpuid2cpuflags
+    emerge app-portage/cpuid2cpuflags
 else
     echo "the cpuid2cpuflags is installed"
 fi
-emerge --ask --verbose --update --deep --newuse @world
+emerge  --verbose --update --deep --newuse @world
 emerge --depclean
 
 MATCH=$(grep "USE=" "$MAKE_CONF")

@@ -1,2 +1,2 @@
 #!/bin/bash
-emerge -n --ask sys-fs/e2fsprogs
+emerge -n sys-fs/e2fsprogs

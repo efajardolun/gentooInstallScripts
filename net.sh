@@ -1,11 +1,7 @@
 #!/bin/bash
 
 #TODO change the default route to get info over ip route, and review config proxy read because never ask
-
-DEFAULT_IP=192.168.100.29/24
-DEFAULT_HOSTNAME=gentoo_installing
-DEFAULT_ROUTE=192.168.100.1
-DEFAULT_NAMESERVER=168.176.5.148
+.defaults.sh
 
 NET_FILE=/etc/conf.d/net
 HOSTNAME_FILE=/etc/conf.d/hostname
@@ -93,10 +89,10 @@ config_boot () {
 
 config_proxies() {
     proxies="no"
-    read -p "config proxies default [NO/yes]:" proxies
+    read -t 15 -p "config proxies default [NO/yes]:" proxies
     if [ "$proxies" == "yes" ] || [ "$proxies" == "Yes" ] || [ "$proxies" == "YES" ]
     then source proxies.sh
     else
-    echo "No proxies configured"
+	echo "No proxies configured"
     fi
 }
