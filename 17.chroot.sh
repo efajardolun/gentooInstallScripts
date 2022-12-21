@@ -40,9 +40,5 @@ mount --make-rslave /mnt/gentoo/dev
 mount --bind /run /mnt/gentoo/run
 mount --make-slave /mnt/gentoo/run
 
-chroot /mnt/gentoo /bin/bash
-source /etc/profile
-export PS1="(chroot) ${PS1}"
-config_proxies
-
+chroot /mnt/gentoo /root/gentooInstallScripts/install2.sh
 #TODO make a revert chroot procedure

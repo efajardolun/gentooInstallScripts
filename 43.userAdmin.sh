@@ -1,6 +1,6 @@
 #!/bin/bash
 #read -p "set user name with admin access: " username
-.secrets.sh
+. secrets.sh
 
 if [ -n $username ]
 then

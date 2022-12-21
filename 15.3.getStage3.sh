@@ -21,7 +21,7 @@ echo "$ANS";
 if [ -n "$ANS" ]
 then
     echo "hash matched, uncompressing  on $DIR";
-    tar xpvf "$LBASE" --xattrs-include='*.*' --numeric-owner;
+    tar xpf "$LBASE" --xattrs-include='*.*' --numeric-owner;
 else
     echo "hash is no match check the downloaded files";
 fi

@@ -1,5 +1,5 @@
 #!/bin/bash
-.secrets.sh
+. secrets.sh
 
 echo "setting the root password"
 echo -e "${rootpass}\n${rootpass}" | passwd root
